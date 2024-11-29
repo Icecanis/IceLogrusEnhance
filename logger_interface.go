@@ -54,7 +54,7 @@ func (g *GormLogrusLogger) Trace(ctx context.Context, begin time.Time, fc func()
 		g.log.WithContext(ctx).WithFields(logrus.Fields{
 			"elapsed": elapsed,
 			"rows":    rows,
-		}).Infof("Executed SQL: %s", sql) // 确保这里是 Info 而不是 Debug
+		}).Debugf("Executed SQL: %s", sql)
 	}
 }
 
