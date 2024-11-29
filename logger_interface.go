@@ -31,7 +31,7 @@ func (g *GormLogrusLogger) LogMode(level logger.LogLevel) logger.Interface {
 }
 
 func (g *GormLogrusLogger) Info(ctx context.Context, msg string, args ...interface{}) {
-	g.log.WithContext(ctx).Infof(msg, args...)
+	g.log.WithContext(ctx).Debugf(msg, args...)
 }
 
 func (g *GormLogrusLogger) Warn(ctx context.Context, msg string, args ...interface{}) {
